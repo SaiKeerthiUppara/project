@@ -1,156 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .main{
-            border: 2px solid black;
-            height: 1700px;
-            width:800px;
-            background-image: url(mount.jpg);
-            transform: translate(300px);
-        }
-        pre{
-            color: white;
-            margin-left: 300px;
-            margin-top: -40px;
-            font-size: large;
-        }
-        .main1{
-            border: 2px solid black;
-            height: 1580px;
-            width: 700px;
-            margin-left: 50px;
-        }
-        .box1{
-            border: 2px solid white;
-            height: 350px;
-            width: 350px;
-            margin-left: 350px;
-            margin-top:-355px ;
-            background-color: aliceblue;
-        }
-    
-        button{
-            margin-left: 80px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUZZLE</title>
+  <style>
+    :root {
+      --primary-color: #1b9bff;
+      --secondary-color: darkgreen;
+      --tertiary-color: rgb(73, 235, 146);
+      --font-color: white;
+      --bg-color: white;
+      --text-size: 18px;
+    }
 
+    body {
+      background-image: url("PICS/mount.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
 
-        .box2{
-            border: 2px solid white;
-            height: 348px;
-            width: 348px;
-            background-color: aliceblue;
-        }
-        .box{
-            height: 180px;
-            width: 352px;
-            background-color:aliceblue;
-            margin-left: 350px;
-            margin-top:-200px;
-        }
-        .base{
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-    </style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      padding: 0 15px;
+      height: 60px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .navdiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: 600;
+      color: var(--font-color);
+      margin-left: 6%;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    li a {
+      color: var(--font-color);
+      font-size: var(--text-size);
+      font-weight: bold;
+      margin-right: 25px;
+      text-decoration: none;
+      transition: background 0.5s;
+    }
+
+    li a:hover,
+    li a:active {
+      background: var(--primary-color);
+    }
+
+    .flex-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: var(--bg-color);
+      padding: 40px;
+      text-align: center;
+      flex: 1 1 300px;
+      max-width: 550px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background-color: var(--primary-color);
+    }
+
+    .button-secondary {
+      background-color: var(--secondary-color);
+    }
+
+    .button-tertiary {
+      background-color: var(--tertiary-color);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 50px;
+      font-size: 20px;
+      background-color: rgba(12, 12, 12, 0.7);
+      color: var(--font-color);
+    }
+    @media screen and (min-width: 601px){
+        .box {
+      background-color: var(--bg-color);
+      padding: 40px;
+      text-align: center;
+      flex: 1 1 300px;
+      min-width: 400px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    }
+    @media screen and (max-width: 600px) {
+      .navbar {
+        height: 70px;
+        padding: 0 10px;
+      }
+      .logo {
+        font-size: 25px;
+      }
+
+      li a {
+        font-size: 16px;
+      }
+
+      .box {
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-   <div class="main">
-    <h3 style="color: whitesmoke;margin-left: 20px;">Puzzle</h3>
-      <pre>     Home   Services   Clients  External  Contact </pre>
+  <div>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo">PUZZLE</div>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#externals">Externals</a></li>
+          <li><a href="#contacts">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="main1">
-        <img src="river.jpg" heigt="300px"width="350px">
+    <div class="flex-box">
+      <div class="box">
+        <img src="PICS/river.jpg" alt="Image 2" style="width: 100%; height: auto;">
+        
+      </div>
+      <div class="box">
+        <h3>PUZZLE BOOTSTRAP TEMPLATE</h3>
+        <p style="padding: 15px;">Puzzle is a Bootstrap(v3.3.6) responsive template provided by templatemo. You can download, edit, and use this layout for free. No backlink is required. Credit goes to Unsplash for images used in this layout.
+        <br>
+        It is a Bootstrap responsive template provided by templatemo. You can download, edit, and use this layout for free. No backlink is required. Credit goes to Unsplash for images used in this layout.</p>
+        <br>
+        <br>
+        <br>
+        <button type="button" class="button button-primary">Big Button</button>
+        <button type="button" class="button button-secondary">Download</button>
+      </div>
+
+      <section id="services" class="box">
+        <h3  style="padding: 15px;">Quality Services</h3>
+        <p>Service quality refers to the degree to which a service meets or exceeds customer expectations. It is a measure of how well a service is delivered and how it satisfies customers' needs and desires. Service quality is often assessed based on several dimensions, including reliability, responsiveness, assurance, empathy, and tangibles.</p>
+        <ul>
+          <li>Tangibles: appearance of physical facilities, equipment, personnel, and communication materials.</li>
+          <li>Reliability: ability to perform the promised service dependably and accurately.</li>
+          <li>Responsiveness: willingness to help customers and provide prompt service.</li>
+          <li>Assurance: knowledge and courtesy of employees and their ability to convey trust and confidence.</li>
+          <li>Empathy: the caring, individualized attention the firm provides its customers.</li>
+        </ul>
+      </section>
+      <div class="box">
+        <img src="PICS/girl.jpg" alt="Image 2" style="width: 100%; height: auto;">
+        
+       </div>
+      <div class="box">
+        <img src="PICS/coffee.jpg" alt="Image 2" style="width: 100%; height: auto;">
+        
+      </div> 
+      <section id="clients" class="box">
+        <h3>Our Clients</h3>
+        <p  style="padding: 15px;">Our clients face increasingly complex and interwoven business problems. Our multidisciplinary model gives them access to a broad range of services, expertise, and ideas when they need them most as part of a fully integrated solution. The approach we take is core to our purpose to inspire confidence and empower change and to build public trust.</p>
+        <button type="button" class="button button-primary">Small Button</button>
+        <button type="button" class="button button-secondary">Download</button>
+        <button type="button" class="button button-tertiary">Demo</button>
+      </section>
+
        
-        <div class="box1">
-            <h3 style="text-align: center;"> Puzzle Bootstrap Template</h3>
-            <p style="margin-left: 10px;">Puzzle is a Bootstrap (v3.3.6) responsive template provided by tempat dYou can download, edit and ute this layout for absolutely free of charge<br><br><br>
 
-                No backlink is required to use this template. Credit goes to for images used this ayan.<br><br><br></p>
-            <button >Big Button</button>
-            <button style="background-color: cornflowerblue;margin-left:0px"> Download</button>
-        </div>
+      <section id="contacts" class="box">
+        <h3>Contact Us</h3>
+        <p  style="padding: 15px;">An effective Contact Us page typically starts with a catchy header. This draws the visitor in and encourages them to utilize your support offers.</p>
+        <input type="text" placeholder="Your Name..." style="width: 100%; padding: 10px; margin: 10px 0;">
+        <input type="text" placeholder="Your Email..." style="width: 100%; padding: 10px; margin: 10px 0;">
+        <textarea name="subject" rows="2" style="width: 100%; padding: 10px; margin: 10px 0;" placeholder="Your Subject..."></textarea>
+        <textarea name="message" rows="4" style="width: 100%; padding: 10px; margin: 10px 0;" placeholder="Write Your Message..."></textarea>
+        <button type="button" class="button button-primary">Submit</button>
+      </section>
 
-
-        <div class="main2">
-            <div class="box2">
-                <h3 style="text-align: center;"> Quility Services</h3>
-                <p style="margin-left: 10px;">Morbi auctor tristique mattis. Vestibulum vitae sapien a ligula mollis ullamcorper ac a nisi. Ut a dignissim est, sodales pellentesque purus. Pellentesque porttitor ante at nulla ormare, lectus posuere eget sagittis sapien pulvinar.<br><br>
-
-                   <span style="color: blue;">Cras id dui eutortor eleifend gravida<br>
-                    
-                    Nulla eget sen sit amet turpis templat</span><br><br>
-                    
-                    Nula odio nunc, moncus quis porttitor quis, convallis sed tortor. Quisque dui mews, euismod vel sapien at maximus feugat telus
-                    
-                    Curabitur vel rutrum augue, id tristique diam. Sed imperdiet quis Ipsum a vulputate. Suspendisse sit amet nibh m</p>
-               <img style="margin-left: 350px;margin-top: -335px;" src="girl.jpg"height="352px"width="352px">
-               
-            </div>
-
-
-            <div class="main3">
-                <img src="coffee.jpg" heigt="300px"width="350px">
-               
-                <div class="box1">
-                    <h3 style="text-align: center;"> Our Clients</h3>
-                    <p style="margin-left: 10px;">Maecenas tempus nisi in arcu facilisis venenatis. Fusce ac turpis sem. Nulla eget sem sit amet turpisemous viverra at et odio. Crasvel eros id ipsum accumsan venenatis ut ned ipsum.<br><br>
-
-                        Nulla odio nunc, rhoncus quis porttitor quis, convallis sed tortor. Quisque dul metus, euismod vel sapien at, maximus feugiat tellus.<br><br>
-                        
-                        Curabitur vel rutrum augue, id tristique diam. Sed imperdiet quis Ipsum a vulputate  quis sapien a metus interdum hendrerite.</p>
-                        <button style="margin-left:20px;">Small Button</button>
-                    <button style="background-color: cadetblue;margin-left: 20px; width: 80px;">Demo</button>
-                    <button style="background-color:darkgoldenrod;margin-left:1px;margin-top:-80px;"> Download</button>
-                    
-                </div>
-        
-                <div class="main4">
-                <div class="box2">
-                    
-                    <h3 style="margin-left: 20px;">Conatct Us</h3>
-                    <p style="margin-left: 10px;">Nulla eget sein sit amet turpis tecnous viverra at et ooo. Cras vel
-
-                       <br> eros id ipsumi actumisan venenatis in nec ipsum</p>
-                 <input type="text" placeholder="Your Name">
-                 <input type="text" placeholder="Your Email"><br><br>
-                 <input type="text" placeholder="Your Subject....."><br><br>
-                 <input style="height: 80px;width: 335px;"type="text" placeholder="Write your message"><br><br>
-                 <input style="width: 50px;"    type="text" placeholder="Submit">
-                   <img style="margin-left: 350px;margin-top: -335px;" src="walk.jpg"height="352px"width="352px">
-                   
-                </div>
-        
-                <div class="main3">
-                    <img  src="sugarcane.png" heigt="300px"width="350px">
-                   
-                    <div class="box">
-                        <h3 style="padding: 10px;">About Website</h3>
-                        <p>Puzzle Template is brought to you by templatemo. Sed imperdiet quis ipsum a vulputate. Suspendisse sit amet nibh mi. In quis sapien a metus interdum hendrerit.</p> 
-                    </div>
-                
-                <div class="base"><span style="color: white;">Copyright @2084 Company Name |Design:</span><span style="color:brown">Puzzle</span></div>
-        
-        
-        </div>
+      <section id="externals" class="box">
+        <img src="PICS/walk.jpg" alt="Image 6" style="width: 100%; height: auto;">
+        <h3>About this website</h3>
+        <p  style="padding: 15px;">Consider what step you'd like readers to take next. Use additional content and calls to action to move them forward towards that goal. This could include buttons, testimonials, an explainer video, data visualizations, links to blog posts, products, your social media accounts, or newsletter.</p>
+      </section>
+      <div class="box">
+        <h3>About this website</h3>
+        <p  style="padding: 15px;">Consider what step you'd like readers to take next. Use additional content and calls to action to move them forward towards that goal. This could include buttons, testimonials, an explainer video, data visualizations, links to blog posts, products, your social media accounts, or newsletter.</p>
+      
+      </div>
     </div>
-   
 
-   
-   
-
-
-
-    
-
-
-
-
-
-   </div>
+    <div class="footer">
+      <h3>Copyright @ 2084 Company Name | Design Puzzle</h3>
+    </div>
+  </div>
 </body>
 </html>
